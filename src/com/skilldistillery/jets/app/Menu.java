@@ -42,7 +42,7 @@ public class Menu {
 	private void listFleet(List<Helicopter> helicopters) {
 		System.out.println("\t\t\t*Current aircraft in air field*");
 		for (Helicopter h : helicopters) {
-			System.out.print(h.getModel() + "\t");
+			System.out.println("Model: " + h.getModel() + "\tSpeed:" + h.getSpeed() + "\tRange: " + h.getRange() + "\tPrice: " + h.getPrice());
 		}
 		System.out.println("\n");
 	}

@@ -2,12 +2,6 @@ package com.skilldistillery.jets.app;
 
 public class CargoHelicopter extends Helicopter implements CargoCarrier {
 
-	@Override
-	public String toString() {
-		return "CargoHelicopter [getModel()=" + getModel() + ", getSpeed()=" + getSpeed() + ", getRange()=" + getRange()
-				+ ", getPrice()=" + getPrice() + "]";
-	}
-
 	public CargoHelicopter(String model, double speed, int range, long price) {
 		super(model, speed, range, price);
 		// TODO Auto-generated constructor stub
@@ -24,8 +18,8 @@ public class CargoHelicopter extends Helicopter implements CargoCarrier {
 	@Override
 	public void fly() {
 		double timeTillEmpty = getRange() / getSpeed();
-		System.out.println("*Jet Details*\n Model: " + getModel() + "\tPrice: " + getPrice() + "\tSpeed: " + getSpeed()
-				+ "\tRange: " + getRange() + "\tTime Till Empty: " + timeTillEmpty);
+		System.out.println("*Taking Flight*\n Model: " + getModel() + "\tPrice: " + getPrice() + "\tSpeed: " + getSpeed()
+				+ "\tRange: " + getRange() + "\tTime Till Empty(Hours): " + timeTillEmpty);
 	}
 
 	@Override

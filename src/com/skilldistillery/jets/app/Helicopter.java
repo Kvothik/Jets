@@ -2,10 +2,6 @@ package com.skilldistillery.jets.app;
 
 public abstract class Helicopter {
 	
-	public String toString() {
-		return "Helicopter [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
-	}
-
 	private String model;
 	private double speed;
 	private int range;
