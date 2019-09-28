@@ -49,28 +49,26 @@ public class Menu {
 	}
 
 	private void flyAircraft(List<Helicopter> helicopters, Scanner kb) {
-		int count = 0;
 		System.out.println("\t\t\t*Current aircraft in air field*");
+		System.out.println("Select the aircraft you would like to fly. To fly all, select 99.");
+		int count = 0;
 		for (Helicopter h : helicopters) {
 			System.out.print(count + ".) " + h.getModel() + "\n");
 			count++;
 		}
-		System.out.println("Select the aircraft you would like to fly. To fly all, select 99.");
 		Helicopter ac = null;
 		int flyChoice = kb.nextInt();
 		if (flyChoice <= helicopters.size()) {
-			for (Helicopter h : helicopters) {
-				 ac = helicopters.get(flyChoice);
-			}
+			ac = helicopters.get(flyChoice);
 			ac.fly();
-		}else if(flyChoice == 99) {
-				for (Helicopter h : helicopters) {
-					h.fly();
-				}
+		} else if (flyChoice == 99) {
+			for (Helicopter h : helicopters) {
+				h.fly();
+			}
 		} else {
 			System.out.println("Invalid selection, please try again.");
 		}
-		
+
 		System.out.println();
 	}
 
