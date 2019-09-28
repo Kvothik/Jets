@@ -1,17 +1,20 @@
 package com.skilldistillery.jets.app;
 
-public abstract class Jet {
+public abstract class Helicopter {
 	private String model;
 	private double speed;
 	private int range;
 	private long price;
 
-	public Jet(String model, double speed, int range, long price) {
+	public Helicopter(String model, double speed, int range, long price) {
 		super();
 		this.model = model;
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
+	}
+
+	public Helicopter() {
 	}
 
 	public abstract void fly();
