@@ -10,7 +10,7 @@ public class Menu {
 			listFleet(helicopters);
 			break;
 		case 2:// fly all aircraft
-			flyAircraft(helicopters);
+			flyAircraft(helicopters, kb);
 			break;
 		case 3:// view fastest aircraft
 			fastestAircraft(helicopters);
@@ -42,15 +42,35 @@ public class Menu {
 	private void listFleet(List<Helicopter> helicopters) {
 		System.out.println("\t\t\t*Current aircraft in air field*");
 		for (Helicopter h : helicopters) {
-			System.out.println("Model: " + h.getModel() + "\tSpeed:" + h.getSpeed() + "\tRange: " + h.getRange() + "\tPrice: " + h.getPrice());
+			System.out.println("Model: " + h.getModel() + "\tSpeed:" + h.getSpeed() + "\tRange: " + h.getRange()
+					+ "\tPrice: " + h.getPrice());
 		}
 		System.out.println("\n");
 	}
 
-	private void flyAircraft(List<Helicopter> helicopters) {
+	private void flyAircraft(List<Helicopter> helicopters, Scanner kb) {
+		int count = 0;
+		System.out.println("\t\t\t*Current aircraft in air field*");
 		for (Helicopter h : helicopters) {
-			h.fly();
+			System.out.print(count + ".) " + h.getModel() + "\n");
+			count++;
 		}
+		System.out.println("Select the aircraft you would like to fly. To fly all, select 99.");
+		Helicopter ac = null;
+		int flyChoice = kb.nextInt();
+		if (flyChoice <= helicopters.size()) {
+			for (Helicopter h : helicopters) {
+				 ac = helicopters.get(flyChoice);
+			}
+			ac.fly();
+		}else if(flyChoice == 99) {
+				for (Helicopter h : helicopters) {
+					h.fly();
+				}
+		} else {
+			System.out.println("Invalid selection, please try again.");
+		}
+		
 		System.out.println();
 	}
 

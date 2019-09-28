@@ -28,7 +28,7 @@ public class HelicopterApplication {
 				keepGoing = false;
 				break;
 			}
-			System.out.println("1.List fleet\n2.Fly all aircraft\n3.View fastest aircraft\n"
+			System.out.println("1.List fleet\n2.Fly an aircraft\n3.View fastest aircraft\n"
 					+ "4.View aircrafrt with longest range\n5.Load all Cargo aircraft\n"
 					+ "6.Dogfight!\n7.Add an aircraft to Fleet\n8.Remove an aircraft from Fleet\n9.Quit\n");
 			menuChoice = kb.nextInt();
