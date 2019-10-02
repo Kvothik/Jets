@@ -24,16 +24,16 @@ The class AirField reads the helicopter data from the attached .txt file. This u
 
 Menu is where the majority of the programs logic lives.
 This class defines what each of these menu options do.
-#####1.List fleet
-#####2.Fly an aircraft
+##### 1.List fleet
+##### 2.Fly an aircraft
 This contains a sub menu to chose one aircraft to fly or to fly all aircraft.
-#####3.View fastest aircraft
-#####4.View aircraft with longest range
-#####5.Load all Cargo aircraft
+##### 3.View fastest aircraft
+##### 4.View aircraft with longest range
+##### 5.Load all Cargo aircraft
 Calls CargoHelicopters implemented class CargoCarrier.
-#####6.Dogfight!
+##### 6.Dogfight!
 Calls AttackHelicopters implemented class CombatReady.
-#####7.Add an aircraft to Fleet
+##### 7.Add an aircraft to Fleet
 This contains a sub menu for user to choose which type of aircraft to add from the list of subclasses.
-#####8.Remove an aircraft from Fleet
-#####9.Quit
+##### 8.Remove an aircraft from Fleet
+##### 9.Quit
